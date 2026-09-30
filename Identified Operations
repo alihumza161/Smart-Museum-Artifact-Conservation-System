@@ -1,0 +1,25 @@
+perform_self_check() — Tests the functionality of all essential sensors and environmental-control devices during system startup.
+
+record_artifact_info() — Stores the artifact's unique identification details and its specific environmental limits upon placement.
+
+monitor_environment() — Continuously tracks real-time sensor readings for temperature, humidity, light exposure, vibration, door status, and power availability.
+
+verify_door_status() — Checks whether the chamber door is open or closed to govern active conservation eligibility.
+
+activate_conservation() — Initiates the normal environmental conservation process once the door is closed and the artifact profile is loaded.
+
+adjust_temperature() — Commands environmental-control mechanisms to alter and restore the chamber temperature when it deviates from the permitted range.
+
+adjust_humidity() — Commands moisture-control mechanisms to correct humidity levels when they drift outside acceptable limits.
+
+verify_environmental_recovery() — Evaluates post-correction sensor readings to confirm that temperature or humidity has successfully returned to safe limits.
+
+trigger_protection_mode() — Activates emergency safeguards (reduces lighting, boosts controls, and alerts operators) if environmental deviations exceed the allowed recovery period.
+
+respond_to_vibration() — Temporarily suspends active operations that increase risk when a significant vibration threshold is crossed.
+
+verify_stabilization() — Confirms that vibration levels have stayed below the threshold for the required continuous stabilization period before resuming normal tasks.
+
+handle_power_loss() — Switches to emergency backup power or logs the incident and initiates a safe system shutdown if power fails.
+
+authorize_artifact_removal() — Validates that the chamber is safe and no protection responses are active to permit safe removal of the artifact by an operator.
